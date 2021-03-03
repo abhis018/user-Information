@@ -1,0 +1,19 @@
+.option {
+    width: 200px;
+    height: 30px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-top: 30px;
+    background-color: rgb(76, 146, 170);
+    font-size: 15px;
+    font-family: 'Monoton', cursive;
+    outline: hidden;
+}
+h1{
+    font-family: 'Monoton', cursive;
+    margin-left: 30%;
+}
+
+.header{
+    display: flex;
+}
