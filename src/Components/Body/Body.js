@@ -4,7 +4,6 @@ import './Card.css'
 
 
 const Body = ({userData}) => {
-    console.log(userData, '3');
     return (
         <div className='box'>
             {userData.map((user, i) => (
