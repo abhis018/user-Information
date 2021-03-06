@@ -6,7 +6,7 @@
     margin-top: 30px;
     background-color: rgb(76, 146, 170);
     font-size: 15px;
-    font-family: 'Monoton', cursive;
+    /* font-family: 'Monoton', cursive; */
     outline: hidden;
 }
 h1{
@@ -16,4 +16,16 @@ h1{
 
 .header{
     display: flex;
+}
+
+input {
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: indigo;
+    border: none;
+}
+button{
+    height: 40px;
+    margin-top: 21px;
 }

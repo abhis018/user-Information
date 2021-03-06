@@ -14,21 +14,26 @@ class App extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onSubmit = (event) => {
-    this.setState({inputPage:event.target.value},()=>{
-      fetch(`https://reqres.in/api/users?page=${this.state.inputPage}`)
-        .then(response=>response.json())
-        .then(data => {
-            this.setState({ userData: data.data }, ()=>{
-        })})
-    });
+  onInputChange = (event) => {
+    this.setState({inputPage: event.target.value});
   }
+
+
+  onSubmit = (event) => {
+    fetch(`https://reqres.in/api/users?page=${this.state.inputPage}`)
+      .then(response=>response.json())
+      .then(data => {
+        this.setState({ userData: data.data}, ()=>{
+      })});
+  }
+
+
   render () {
-    const {userData} = this.state; 
+    const {userData, inputPage} = this.state; 
     return (
       <div className="App">
         <Header onInputChange={this.onInputChange} Submit={this.onSubmit}/>
-        <Body userData={userData}/>
+        <Body userData={userData} inputPage={inputPage} Submit={this.onSubmit} />
       </div>
     );
   }
