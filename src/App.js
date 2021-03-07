@@ -15,7 +15,9 @@ class App extends Component {
   }
 
   onInputChange = (event) => {
-    this.setState({inputPage: event.target.value});
+    this.setState({inputPage: event.target.value}, () => {
+      this.setState({userData: []})
+    });
   }
 
 
